@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <div class="header">
+            <b>Helen Ha-Neul Kim</b>
+            <div class="header-right">
+                <a href="portfoliohome.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="portfoliowork.html">Work</a>
+                <a class="active" href="portfolioabout.html">About</a>
+            </div>
+        </div>
+        <style>
+/*reference for sourcing personal fonts: https://css-tricks.com/snippets/css/using-font-face/*/
+@font-face{
+    font-family: 'handwritten';
+    src: url('handwritten.eot') format('embedded-opentype'), url('handwritten.woff2') format('woff2'), url('handwritten.woff') format('woff'), url('handwritten.ttf') format('truetype'), url('handwritten.svg') format('svg');
+    font-family: 'shattered';
+    src: url('shattered.eot') format('embedded-opentype'), url('shattered.woff2') format('woff2'), url('shattered.woff') format('woff'), url('shattered.ttf') format('truetype'), url('shattered.svg') format('svg');
+}
+*{box-sizing:border-box}
+
+html{
+    background-color:rgb(195,216,226);
+    font-family: 'handwritten', Fallback,'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.header {
+    overflow: hidden;
+    background-color:rgb(47, 0, 34);
+    padding: 7px 7px;
+    border-radius: 3px 3px 0 0;
+}
+.header a {
+    float: left;
+    color:aliceblue;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+.header b {
+    float: left;
+    color:aliceblue;
+    padding: 7px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: 'shattered', Fallback, 'Courier New', Courier, monospace;
+}
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+.header a.active {
+    background-color: aliceblue;
+    color: rgb(47, 0, 34)
+}
+.header-right {
+    float: right;
+}
+
+img{
+    width:150px;
+    max-width:100%;
+    position: relative;
+    margin: auto;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+head{
+    padding: 7px;
+}
+
+body{
+    background-color: aliceblue;
+    border-radius: 3px;
+    height:auto;
+}
+
+p{
+    padding-left: 10px;
+    padding-bottom: 7px;
+    font-weight: normal;
+    font-size: medium;
+}
+.caption{
+    font-size: small;
+    font-weight: bold;
+}
+        </style>
+    </head>
+    <body>
+        <script>
+        </script>
+        <img src="Face2Face.png" ALIGN="left">
+        <p class="caption">
+            This was my submission for OCAD's Face2Face postcard exhibition,
+            which happened during my orientation in first year.
+            It's a self portrait, done in Adobe Illustrator and edited with filters
+            afterwards, referenced from a photograph.
+        </p>
+        <p>
+            So, a little bit about me. My name is Ha-Neul Kim, although I go by Helen.
+            I am Korean-Canadian, so I was born in South Korea, but I grew up in Canada.
+            I speak both English and Korean, though I am far more fluent and comfortable in English,
+            as I use it more often. My language and culture is very important to me,
+            and I utilize both in my artworks often.
+        </p>
+        <p>
+            I currently attend OCAD University, majoring in Graphic Design, 
+            although I'm taking the chance to explore more forms of art
+            while I'm in school and have the time and resources.
+            I enjoy experimenting with many forms of art, such as sketching,
+            painting, bookbinding, and various forms of digital art.
+            Given the chance, I will likely continue to try out new disciplines,
+            and explore more forms and styles of art.
+        </p>
+        <p>
+            Social Media + Other Ways of Contact: 
+            <a href="https://www.instagram.com/ateres_art/">Instagram</a>
+        </p>
+        <p>
+            School Email: <a href="mailto: 3179355@ocadu.ca">3179355@ocadu.ca</a>
+        </p>
+    </body>
+</html>

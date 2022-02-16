@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <div class="header">
+            <b>Helen Ha-Neul Kim</b>
+            <div class="header-right">
+                <a href="portfoliohome.html">Home</a>
+                <a class="active" href="portfolio.html">Portfolio</a>
+                <a href="portfoliowork.html">Work</a>
+                <a href="portfolioabout.html">About</a>
+            </div>
+        </div>
+        <p>
+            This is the digital portfolio I made in my last year of high school,
+            and used when applying to university.
+            Here you will find the best projects I did in high school,
+            along with some of the personal work I've done.
+        </p>
+        <style>
+/*reference for sourcing personal fonts: https://css-tricks.com/snippets/css/using-font-face/*/
+@font-face{
+    font-family: 'handwritten';
+    src: url('handwritten.eot') format('embedded-opentype'), url('handwritten.woff2') format('woff2'), url('handwritten.woff') format('woff'), url('handwritten.ttf') format('truetype'), url('handwritten.svg') format('svg');
+    font-family: 'shattered';
+    src: url('shattered.eot') format('embedded-opentype'), url('shattered.woff2') format('woff2'), url('shattered.woff') format('woff'), url('shattered.ttf') format('truetype'), url('shattered.svg') format('svg');
+}
+/*reference for slideshow: https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+/*The slideshow, as well as being able to add my own fonts to my website are the parts
+of the project that I found I enjoyed the most. For the slideshow, it was the main new
+technique that I got to apply for this project, as the rest of the website was more things
+that I learnt during class time. For the fonts, that's something I was wanting to do for 
+a while, and I finally got to do it for this project. 'Shattered' is a font I designed
+in high school as a project, and 'handwritten' is my handwriting turned into a font.
+And now that I know how to source my own fonts when making websites and such, 
+I'll definitely doing so in the future, with these fonts as well as any other fonts 
+that I may create in the future.*/
+*{box-sizing:border-box}
+
+html{
+    background-color:rgb(195,216,226);
+    font-family: 'handwritten', Fallback,'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.header {
+    overflow: hidden;
+    background-color:rgb(47, 0, 34);
+    padding: 7px 7px;
+    border-radius: 3px 3px 0 0;
+}
+.header a {
+    float: left;
+    color:aliceblue;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+.header b {
+    float: left;
+    color:aliceblue;
+    padding: 7px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: 'shattered', Fallback, 'Courier New', Courier, monospace;
+}
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+.header a.active {
+    background-color: aliceblue;
+    color: rgb(47, 0, 34)
+}
+.header-right {
+    float: right;
+}
+
+head{
+    padding: 7px;
+}
+
+body{
+    background-color: aliceblue;
+    border-radius: 3px;
+    height:auto;
+}
+
+p{
+    padding-left: 10px;
+    padding-bottom: 7px;
+    font-weight: normal;
+    font-size: medium;
+}
+
+.portfolio-slideshow{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.myslides{
+    display: none;
+}
+
+.next, .prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width:auto;
+    margin-top: -22px;
+    padding: 25px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 7px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text{
+    color: #0f0f0f;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.75);
+}
+
+.numbertext{
+    color: #0f0f0f;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(240, 248, 255, 0.75);
+}
+
+.dot{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 1px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="portfolio-slideshow">
+            <div class="fade myslides">
+                <div class="numbertext">1/24</div>
+                <img src = "Portfolio - JPG/1 - Title Page.jpg" style="width:100%">
+                <div class="text">Title Page</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">2/24</div>
+                <img src = "Portfolio - JPG/2 - Table of Contents.jpg" style="width:100%">
+                <div class="text">Table of Contents</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">3/24</div>
+                <img src = "Portfolio - JPG/3 - Artist Statement.jpg" style="width:100%">
+                <div class="text">Artist Statement</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">4/24</div>
+                <img src = "Portfolio - JPG/4 - Graphic Design.jpg" style="width:100%">
+                <div class="text">Graphic Design</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">5/24</div>
+                <img src = "Portfolio - JPG/5 - Webbed Font.jpg" style="width:100%">
+                <div class="text">Webbed Font</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">6/24</div>
+                <img src = "Portfolio - JPG/6 - Yearbook Cover.jpg" style="width:100%">
+                <div class="text">Yearbook Cover</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">7/24</div>
+                <img src = "Portfolio - JPG/7 - Book Cover Design.jpg" style="width:100%">
+                <div class="text">Book Cover Design</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">8/24</div>
+                <img src = "Portfolio - JPG/8 - Monochromatic Landscape.jpg" style="width:100%">
+                <div class="text">Monochromatic Landscape</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">9/24</div>
+                <img src = "Portfolio - JPG/9 - Bear Truth Cover.jpg" style="width:100%">
+                <div class="text">Bear Truth Cover</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">10/24</div>
+                <img src = "Portfolio - JPG/10 - Grad Program Cover.jpg" style="width:100%">
+                <div class="text">Grad Program Cover</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">11/24</div>
+                <img src = "Portfolio - JPG/11 - Delightful Quarantine Poster.jpg" style="width:100%">
+                <div class="text">Delightful Quarantine Poster</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">12/24</div>
+                <img src = "Portfolio - JPG/12 - Minimalist Movie Poster.jpg" style="width:100%">
+                <div class="text">Minimalist Movie Poster</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">13/24</div>
+                <img src = "Portfolio - JPG/13 - Dunny Design.jpg" style="width:100%">
+                <div class="text">Dunny Design</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">14/24</div>
+                <img src = "Portfolio - JPG/14 - Interior Design.jpg" style="width:100%">
+                <div class="text">Interior Design</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">15/24</div>
+                <img src = "Portfolio - JPG/15 - Banner Design.jpg" style="width:100%">
+                <div class="text">Banner Design</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">16/24</div>
+                <img src = "Portfolio - JPG/16 - Ahn Sang Soo.jpg" style="width:100%">
+                <div class="text">Ahn Sang Soo</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">17/24</div>
+                <img src = "Portfolio - JPG/17 - Alphabetic Landscape.jpg" style="width:100%">
+                <div class="text">Alphabetic Landscape</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">18/24</div>
+                <img src = "Portfolio - JPG/18 - Seoul Girl.jpg" style="width:100%">
+                <div class="text">Seoul Girl</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">19/24</div>
+                <img src = "Portfolio - JPG/19 - Hollow Knight.jpg" style="width:100%">
+                <div class="text">Hollow Knight</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">20/24</div>
+                <img src = "Portfolio - JPG/20 - Surrealist Triptych.jpg" style="width:100%">
+                <div class="text">Surrealist Triptych</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">21/24</div>
+                <img src = "Portfolio - JPG/21 - Traditional Art.jpg" style="width:100%">
+                <div class="text">Traditional Art</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">22/24</div>
+                <img src = "Portfolio - JPG/22 - Abstraction Through Music.jpg" style="width:100%">
+                <div class="text">Abstraction Through Music</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">23/24</div>
+                <img src = "Portfolio - JPG/23 - Project Semicolon.jpg" style="width:100%">
+                <div class="text">Project Semicolon</div>
+            </div>
+            <div class="fade myslides">
+                <div class="numbertext">24/24</div>
+                <img src = "Portfolio - JPG/24 - Wing Lineart.jpg" style="width:100%">
+                <div class="text">Wing Lineart</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)"></a>
+            <a class="next" onclick="plusSlides(1)"></a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+            <span class="dot" onclick="currentSlide(16)"></span>
+            <span class="dot" onclick="currentSlide(17)"></span>
+            <span class="dot" onclick="currentSlide(18)"></span>
+            <span class="dot" onclick="currentSlide(19)"></span>
+            <span class="dot" onclick="currentSlide(20)"></span>
+            <span class="dot" onclick="currentSlide(21)"></span>
+            <span class="dot" onclick="currentSlide(22)"></span>
+            <span class="dot" onclick="currentSlide(23)"></span>
+            <span class="dot" onclick="currentSlide(24)"></span>
+        </div>
+        <script>
+            var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("myslides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Work</title>
+        <script src="lib/p5.min.js"></script>
+        <script src="lib/addons/p5.sound.js"></script>
+        <script>
+//reference: https://p5js.org/reference/#/p5.AudioIn
+let mic;
+var rectangleList = [];
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext("2d");
+console.log(ctx);
+
+var nyoomRectangles = function(){
+    this.init = function(){
+        this.speed = 4;
+        this.x = canvas.width - 50;
+        this.y = Math.floor(Math.random()*280) + 40;
+        this.w = Math.floor(Math.random()*200) + 40;
+        this.h = Math.floor(Math.random()*150) + 40;
+        this.col = "rgb(155,248,248)";
+    }
+    this.move = function(){
+        this.x -= this.speed;
+        if(this.x < -50) this.x = canvas.width - 50;
+    }
+    this.draw = function(num){
+        draw.rectangles(this.x, this.y, this.w, this.h, this.col)
+    }
+}
+
+function loop(){
+    draw.clear();
+    for(var i=0; i<rectangleList.length; i++){
+        rec = rectangleList[i];
+        rect.draw();
+        rect.move();
+    }
+}
+
+var rectsPerSpawn = 1;
+function addRects(){
+    for(var i=0; i<rectsPerSpawn; i++){
+        if(rectangleList/length<100){
+            var rec = new nyoomRectangles();
+            rectangleList.push(rec);
+            rec.init();
+        }
+    }
+}
+
+var spawn = setInterval(addRects, 500);
+
+var drawrect = {
+    clear: function(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+    },
+    rectangles: function(x, y, w, h, col){
+        ctx.fillStyle = col;
+        ctx.fillRect(x,y,w,h);
+    }
+}
+
+var handle = setInterval(loop, 30);
+
+function setup(){
+    noStroke();
+    let cnv = createCanvas(720, 480);
+    cnv.mousePressed(userStartAudio);
+    textAlign(CENTER);
+    mic = new p5.AudioIn();
+    mic.start();
+}
+
+function draw(){
+    background(100, 7, 7);
+    fill(200);
+    text('tap to start', width/2, 50);
+
+    micLevel = mic.getLevel();
+    let y = height - micLevel * height;
+    ellipse(width/2, y, 50, 50);
+}
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <div class="header">
+            <b>Helen Ha-Neul Kim</b>
+            <div class="header-right">
+                <a class="active" href="portfoliohome.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="portfoliowork.html">Work</a>
+                <a href="portfolioabout.html">About</a>
+            </div>
+        </div>
+        <style>
+/*reference for sourcing personal fonts: https://css-tricks.com/snippets/css/using-font-face/*/
+@font-face{
+    font-family: 'handwritten';
+    src: url('handwritten.eot') format('embedded-opentype'), url('handwritten.woff2') format('woff2'), url('handwritten.woff') format('woff'), url('handwritten.ttf') format('truetype'), url('handwritten.svg') format('svg');
+    font-family: 'shattered';
+    src: url('shattered.eot') format('embedded-opentype'), url('shattered.woff2') format('woff2'), url('shattered.woff') format('woff'), url('shattered.ttf') format('truetype'), url('shattered.svg') format('svg');
+}
+*{box-sizing:border-box}
+
+html{
+    background-color:rgb(195,216,226);
+    font-family: 'handwritten', Fallback,'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.header {
+    overflow: hidden;
+    background-color:rgb(47, 0, 34);
+    padding: 7px 7px;
+    border-radius: 3px 3px 0 0;
+}
+.header a {
+    float: left;
+    color:aliceblue;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+.header b {
+    float: left;
+    color:aliceblue;
+    padding: 7px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 20px;
+    font-weight: normal;
+    font-family: 'shattered', Fallback, 'Courier New', Courier, monospace;
+}
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+.header a.active {
+    background-color: aliceblue;
+    color: rgb(47, 0, 34)
+}
+.header-right {
+    float: right;
+}
+
+img{
+    width:auto;
+    max-width:100%;
+    position: relative;
+    margin: auto;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+head{
+    padding: 7px;
+}
+
+body{
+    background-color: aliceblue;
+    border-radius: 3px;
+    height:auto;
+}
+
+p{
+    padding-left: 10px;
+    padding-bottom: 7px;
+    font-weight: normal;
+    font-size: medium;
+}
+        </style>
+    </head>
+    <body>
+        <script>
+        </script>
+        <p>
+            Welcome to my website,
+            where you can find my past works,
+            portfolio, social media, 
+            and a bit about me.
+        </p>
+        <img src="Magic Shop Rough Lines-01.jpg">
+    </body>
+</html>
